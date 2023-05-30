@@ -22,6 +22,10 @@ public class CreateOrderTest extends BaseTest{
 	String lName = "Ismail";
 	String pCode = "12345";
 	String orderSuccessMsg = "Thank you for your order!";
+	
+	loginPage loginPage;
+	productsPage productPage;
+	cartPage cartPage;
 
 	@BeforeTest
 	public void launchApplication() {
@@ -31,7 +35,7 @@ public class CreateOrderTest extends BaseTest{
 	
 	@Test
 	public void VerifyLogin() throws InterruptedException {
-		loginPage loginPage = new loginPage(driver);
+		loginPage = new loginPage(driver);
 		loginPage.loginApplication(name, password);
 		Thread.sleep(3);
 		Assert.assertEquals(loginPage.getAppLogoText(),"Swag Labs");
@@ -39,14 +43,14 @@ public class CreateOrderTest extends BaseTest{
 	
 	@Test(dependsOnMethods= {"VerifyLogin"})
 	public void VerifyAddingItemIntoCart() throws InterruptedException {
-		productsPage productPage = new productsPage(driver);
+		productPage = new productsPage(driver);
 		productPage.addProductToCart(productName);
 		productPage.goToCartPage();
 	}
 	
 	@Test(dependsOnMethods= {"VerifyAddingItemIntoCart"})
 	public void VerifyCheckoutFromCart() throws InterruptedException {
-		cartPage cartPage = new cartPage(driver);
+		cartPage = new cartPage(driver);
 		Thread.sleep(3);
 		Assert.assertEquals(cartPage.getItemNameInCart(), productName);
 		cartPage.goToCheckoutPage();
@@ -66,6 +70,5 @@ public class CreateOrderTest extends BaseTest{
 	public void closeBrowser(){
 		driver.close();
 	}
-	
 	
 }
