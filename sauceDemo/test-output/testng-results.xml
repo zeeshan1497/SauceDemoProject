@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-30T11:30:57 PKT" name="Suite" finished-at="2023-05-30T11:31:01 PKT" duration-ms="3777">
+    <groups>
+    </groups>
+    <test started-at="2023-05-30T11:30:57 PKT" name="Test" finished-at="2023-05-30T11:31:01 PKT" duration-ms="3777">
+      <class name="sauceDemo.tests.CreateOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sauceDemo.tests.CreateOrderTest@26ceffa8]" started-at="2023-05-30T11:30:57 PKT" name="launchApplication" finished-at="2023-05-30T11:31:00 PKT" duration-ms="2690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="VerifyLogin()[pri:0, instance:sauceDemo.tests.CreateOrderTest@26ceffa8]" started-at="2023-05-30T11:31:00 PKT" name="VerifyLogin" finished-at="2023-05-30T11:31:00 PKT" duration-ms="315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLogin -->
+        <test-method signature="VerifyAddingItemIntoCart()[pri:0, instance:sauceDemo.tests.CreateOrderTest@26ceffa8]" started-at="2023-05-30T11:31:01 PKT" name="VerifyAddingItemIntoCart" finished-at="2023-05-30T11:31:01 PKT" depends-on-methods="sauceDemo.tests.CreateOrderTest.VerifyLogin" duration-ms="154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyAddingItemIntoCart -->
+        <test-method signature="VerifyCheckoutFromCart()[pri:0, instance:sauceDemo.tests.CreateOrderTest@26ceffa8]" started-at="2023-05-30T11:31:01 PKT" name="VerifyCheckoutFromCart" finished-at="2023-05-30T11:31:01 PKT" depends-on-methods="sauceDemo.tests.CreateOrderTest.VerifyAddingItemIntoCart" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyCheckoutFromCart -->
+        <test-method signature="VerifyOrderConfirmation()[pri:0, instance:sauceDemo.tests.CreateOrderTest@26ceffa8]" started-at="2023-05-30T11:31:01 PKT" name="VerifyOrderConfirmation" finished-at="2023-05-30T11:31:01 PKT" depends-on-methods="sauceDemo.tests.CreateOrderTest.VerifyCheckoutFromCart" duration-ms="327" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyOrderConfirmation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:sauceDemo.tests.CreateOrderTest@26ceffa8]" started-at="2023-05-30T11:31:01 PKT" name="closeBrowser" finished-at="2023-05-30T11:31:01 PKT" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- sauceDemo.tests.CreateOrderTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
